@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		568850E319672D2E00F0BD31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568850E219672D2E00F0BD31 /* Foundation.framework */; };
+		568850E519672D2E00F0BD31 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568850E419672D2E00F0BD31 /* CoreGraphics.framework */; };
+		568850E719672D2E00F0BD31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568850E619672D2E00F0BD31 /* UIKit.framework */; };
+		568850ED19672D2E00F0BD31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 568850EB19672D2E00F0BD31 /* InfoPlist.strings */; };
+		568850EF19672D2E00F0BD31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 568850EE19672D2E00F0BD31 /* main.m */; };
+		568850F319672D2E00F0BD31 /* JKPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 568850F219672D2E00F0BD31 /* JKPAppDelegate.m */; };
+		568850F619672D2E00F0BD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568850F419672D2E00F0BD31 /* Main.storyboard */; };
+		568850F919672D2E00F0BD31 /* JKPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568850F819672D2E00F0BD31 /* JKPViewController.m */; };
+		568850FB19672D2E00F0BD31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568850FA19672D2E00F0BD31 /* Images.xcassets */; };
+		5688510219672D2E00F0BD31 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5688510119672D2E00F0BD31 /* XCTest.framework */; };
+		5688510319672D2E00F0BD31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568850E219672D2E00F0BD31 /* Foundation.framework */; };
+		5688510419672D2E00F0BD31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568850E619672D2E00F0BD31 /* UIKit.framework */; };
+		5688510C19672D2E00F0BD31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5688510A19672D2E00F0BD31 /* InfoPlist.strings */; };
+		5688510E19672D2E00F0BD31 /* Jan_Ken_Pon_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5688510D19672D2E00F0BD31 /* Jan_Ken_Pon_Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5688510519672D2E00F0BD31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568850D719672D2E00F0BD31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 568850DE19672D2E00F0BD31;
+			remoteInfo = "Jan Ken Pon!";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		568850DF19672D2E00F0BD31 /* Jan Ken Pon!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jan Ken Pon!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		568850E219672D2E00F0BD31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		568850E419672D2E00F0BD31 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		568850E619672D2E00F0BD31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		568850EA19672D2E00F0BD31 /* Jan Ken Pon!-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Jan Ken Pon!-Info.plist"; sourceTree = "<group>"; };
+		568850EC19672D2E00F0BD31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		568850EE19672D2E00F0BD31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		568850F019672D2E00F0BD31 /* Jan Ken Pon!-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jan Ken Pon!-Prefix.pch"; sourceTree = "<group>"; };
+		568850F119672D2E00F0BD31 /* JKPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKPAppDelegate.h; sourceTree = "<group>"; };
+		568850F219672D2E00F0BD31 /* JKPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKPAppDelegate.m; sourceTree = "<group>"; };
+		568850F519672D2E00F0BD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		568850F719672D2E00F0BD31 /* JKPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKPViewController.h; sourceTree = "<group>"; };
+		568850F819672D2E00F0BD31 /* JKPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKPViewController.m; sourceTree = "<group>"; };
+		568850FA19672D2E00F0BD31 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5688510019672D2E00F0BD31 /* Jan Ken Pon!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jan Ken Pon!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5688510119672D2E00F0BD31 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5688510919672D2E00F0BD31 /* Jan Ken Pon!Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Jan Ken Pon!Tests-Info.plist"; sourceTree = "<group>"; };
+		5688510B19672D2E00F0BD31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5688510D19672D2E00F0BD31 /* Jan_Ken_Pon_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Jan_Ken_Pon_Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		568850DC19672D2E00F0BD31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				568850E519672D2E00F0BD31 /* CoreGraphics.framework in Frameworks */,
+				568850E719672D2E00F0BD31 /* UIKit.framework in Frameworks */,
+				568850E319672D2E00F0BD31 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568850FD19672D2E00F0BD31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5688510219672D2E00F0BD31 /* XCTest.framework in Frameworks */,
+				5688510419672D2E00F0BD31 /* UIKit.framework in Frameworks */,
+				5688510319672D2E00F0BD31 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		568850D619672D2E00F0BD31 = {
+			isa = PBXGroup;
+			children = (
+				568850E819672D2E00F0BD31 /* Jan Ken Pon! */,
+				5688510719672D2E00F0BD31 /* Jan Ken Pon!Tests */,
+				568850E119672D2E00F0BD31 /* Frameworks */,
+				568850E019672D2E00F0BD31 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		568850E019672D2E00F0BD31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				568850DF19672D2E00F0BD31 /* Jan Ken Pon!.app */,
+				5688510019672D2E00F0BD31 /* Jan Ken Pon!Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		568850E119672D2E00F0BD31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				568850E219672D2E00F0BD31 /* Foundation.framework */,
+				568850E419672D2E00F0BD31 /* CoreGraphics.framework */,
+				568850E619672D2E00F0BD31 /* UIKit.framework */,
+				5688510119672D2E00F0BD31 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		568850E819672D2E00F0BD31 /* Jan Ken Pon! */ = {
+			isa = PBXGroup;
+			children = (
+				568850F119672D2E00F0BD31 /* JKPAppDelegate.h */,
+				568850F219672D2E00F0BD31 /* JKPAppDelegate.m */,
+				568850F419672D2E00F0BD31 /* Main.storyboard */,
+				568850F719672D2E00F0BD31 /* JKPViewController.h */,
+				568850F819672D2E00F0BD31 /* JKPViewController.m */,
+				568850FA19672D2E00F0BD31 /* Images.xcassets */,
+				568850E919672D2E00F0BD31 /* Supporting Files */,
+			);
+			path = "Jan Ken Pon!";
+			sourceTree = "<group>";
+		};
+		568850E919672D2E00F0BD31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				568850EA19672D2E00F0BD31 /* Jan Ken Pon!-Info.plist */,
+				568850EB19672D2E00F0BD31 /* InfoPlist.strings */,
+				568850EE19672D2E00F0BD31 /* main.m */,
+				568850F019672D2E00F0BD31 /* Jan Ken Pon!-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5688510719672D2E00F0BD31 /* Jan Ken Pon!Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5688510D19672D2E00F0BD31 /* Jan_Ken_Pon_Tests.m */,
+				5688510819672D2E00F0BD31 /* Supporting Files */,
+			);
+			path = "Jan Ken Pon!Tests";
+			sourceTree = "<group>";
+		};
+		5688510819672D2E00F0BD31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5688510919672D2E00F0BD31 /* Jan Ken Pon!Tests-Info.plist */,
+				5688510A19672D2E00F0BD31 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		568850DE19672D2E00F0BD31 /* Jan Ken Pon! */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5688511119672D2E00F0BD31 /* Build configuration list for PBXNativeTarget "Jan Ken Pon!" */;
+			buildPhases = (
+				568850DB19672D2E00F0BD31 /* Sources */,
+				568850DC19672D2E00F0BD31 /* Frameworks */,
+				568850DD19672D2E00F0BD31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Jan Ken Pon!";
+			productName = "Jan Ken Pon!";
+			productReference = 568850DF19672D2E00F0BD31 /* Jan Ken Pon!.app */;
+			productType = "com.apple.product-type.application";
+		};
+		568850FF19672D2E00F0BD31 /* Jan Ken Pon!Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5688511419672D2E00F0BD31 /* Build configuration list for PBXNativeTarget "Jan Ken Pon!Tests" */;
+			buildPhases = (
+				568850FC19672D2E00F0BD31 /* Sources */,
+				568850FD19672D2E00F0BD31 /* Frameworks */,
+				568850FE19672D2E00F0BD31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5688510619672D2E00F0BD31 /* PBXTargetDependency */,
+			);
+			name = "Jan Ken Pon!Tests";
+			productName = "Jan Ken Pon!Tests";
+			productReference = 5688510019672D2E00F0BD31 /* Jan Ken Pon!Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		568850D719672D2E00F0BD31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JKP;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = EzGame;
+				TargetAttributes = {
+					568850FF19672D2E00F0BD31 = {
+						TestTargetID = 568850DE19672D2E00F0BD31;
+					};
+				};
+			};
+			buildConfigurationList = 568850DA19672D2E00F0BD31 /* Build configuration list for PBXProject "Jan Ken Pon!" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 568850D619672D2E00F0BD31;
+			productRefGroup = 568850E019672D2E00F0BD31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				568850DE19672D2E00F0BD31 /* Jan Ken Pon! */,
+				568850FF19672D2E00F0BD31 /* Jan Ken Pon!Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		568850DD19672D2E00F0BD31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				568850FB19672D2E00F0BD31 /* Images.xcassets in Resources */,
+				568850ED19672D2E00F0BD31 /* InfoPlist.strings in Resources */,
+				568850F619672D2E00F0BD31 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568850FE19672D2E00F0BD31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5688510C19672D2E00F0BD31 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		568850DB19672D2E00F0BD31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				568850F319672D2E00F0BD31 /* JKPAppDelegate.m in Sources */,
+				568850EF19672D2E00F0BD31 /* main.m in Sources */,
+				568850F919672D2E00F0BD31 /* JKPViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568850FC19672D2E00F0BD31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5688510E19672D2E00F0BD31 /* Jan_Ken_Pon_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5688510619672D2E00F0BD31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 568850DE19672D2E00F0BD31 /* Jan Ken Pon! */;
+			targetProxy = 5688510519672D2E00F0BD31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		568850EB19672D2E00F0BD31 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				568850EC19672D2E00F0BD31 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		568850F419672D2E00F0BD31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				568850F519672D2E00F0BD31 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5688510A19672D2E00F0BD31 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5688510B19672D2E00F0BD31 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5688510F19672D2E00F0BD31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5688511019672D2E00F0BD31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5688511219672D2E00F0BD31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jan Ken Pon!/Jan Ken Pon!-Prefix.pch";
+				INFOPLIST_FILE = "Jan Ken Pon!/Jan Ken Pon!-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5688511319672D2E00F0BD31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jan Ken Pon!/Jan Ken Pon!-Prefix.pch";
+				INFOPLIST_FILE = "Jan Ken Pon!/Jan Ken Pon!-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5688511519672D2E00F0BD31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Jan Ken Pon!.app/Jan Ken Pon!";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jan Ken Pon!/Jan Ken Pon!-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Jan Ken Pon!Tests/Jan Ken Pon!Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5688511619672D2E00F0BD31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Jan Ken Pon!.app/Jan Ken Pon!";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jan Ken Pon!/Jan Ken Pon!-Prefix.pch";
+				INFOPLIST_FILE = "Jan Ken Pon!Tests/Jan Ken Pon!Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		568850DA19672D2E00F0BD31 /* Build configuration list for PBXProject "Jan Ken Pon!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5688510F19672D2E00F0BD31 /* Debug */,
+				5688511019672D2E00F0BD31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5688511119672D2E00F0BD31 /* Build configuration list for PBXNativeTarget "Jan Ken Pon!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5688511219672D2E00F0BD31 /* Debug */,
+				5688511319672D2E00F0BD31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5688511419672D2E00F0BD31 /* Build configuration list for PBXNativeTarget "Jan Ken Pon!Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5688511519672D2E00F0BD31 /* Debug */,
+				5688511619672D2E00F0BD31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 568850D719672D2E00F0BD31 /* Project object */;
+}
