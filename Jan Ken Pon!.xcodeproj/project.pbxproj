@@ -21,6 +21,9 @@
 		5688510419672D2E00F0BD31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568850E619672D2E00F0BD31 /* UIKit.framework */; };
 		5688510C19672D2E00F0BD31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5688510A19672D2E00F0BD31 /* InfoPlist.strings */; };
 		5688510E19672D2E00F0BD31 /* Jan_Ken_Pon_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5688510D19672D2E00F0BD31 /* Jan_Ken_Pon_Tests.m */; };
+		5688511819673C8100F0BD31 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5688511719673C8100F0BD31 /* GameKit.framework */; };
+		5688511C1967424F00F0BD31 /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5688511B1967424F00F0BD31 /* GameKitHelper.m */; };
+		5688511F19674C4E00F0BD31 /* JKPNagivationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5688511E19674C4E00F0BD31 /* JKPNagivationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		5688510919672D2E00F0BD31 /* Jan Ken Pon!Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Jan Ken Pon!Tests-Info.plist"; sourceTree = "<group>"; };
 		5688510B19672D2E00F0BD31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5688510D19672D2E00F0BD31 /* Jan_Ken_Pon_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Jan_Ken_Pon_Tests.m; sourceTree = "<group>"; };
+		5688511719673C8100F0BD31 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		5688511A1967424F00F0BD31 /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitHelper.h; sourceTree = "<group>"; };
+		5688511B1967424F00F0BD31 /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
+		5688511D19674C4E00F0BD31 /* JKPNagivationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPNagivationController.h; sourceTree = "<group>"; };
+		5688511E19674C4E00F0BD31 /* JKPNagivationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPNagivationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 				568850E519672D2E00F0BD31 /* CoreGraphics.framework in Frameworks */,
 				568850E719672D2E00F0BD31 /* UIKit.framework in Frameworks */,
 				568850E319672D2E00F0BD31 /* Foundation.framework in Frameworks */,
+				5688511819673C8100F0BD31 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +110,7 @@
 		568850E119672D2E00F0BD31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5688511719673C8100F0BD31 /* GameKit.framework */,
 				568850E219672D2E00F0BD31 /* Foundation.framework */,
 				568850E419672D2E00F0BD31 /* CoreGraphics.framework */,
 				568850E619672D2E00F0BD31 /* UIKit.framework */,
@@ -115,10 +125,14 @@
 				568850F119672D2E00F0BD31 /* JKPAppDelegate.h */,
 				568850F219672D2E00F0BD31 /* JKPAppDelegate.m */,
 				568850F419672D2E00F0BD31 /* Main.storyboard */,
+				5688511D19674C4E00F0BD31 /* JKPNagivationController.h */,
+				5688511E19674C4E00F0BD31 /* JKPNagivationController.m */,
 				568850F719672D2E00F0BD31 /* JKPViewController.h */,
 				568850F819672D2E00F0BD31 /* JKPViewController.m */,
 				568850FA19672D2E00F0BD31 /* Images.xcassets */,
 				568850E919672D2E00F0BD31 /* Supporting Files */,
+				5688511A1967424F00F0BD31 /* GameKitHelper.h */,
+				5688511B1967424F00F0BD31 /* GameKitHelper.m */,
 			);
 			path = "Jan Ken Pon!";
 			sourceTree = "<group>";
@@ -200,6 +214,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = EzGame;
 				TargetAttributes = {
+					568850DE19672D2E00F0BD31 = {
+						DevelopmentTeam = LV97WDH886;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
 					568850FF19672D2E00F0BD31 = {
 						TestTargetID = 568850DE19672D2E00F0BD31;
 					};
@@ -250,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5688511C1967424F00F0BD31 /* GameKitHelper.m in Sources */,
 				568850F319672D2E00F0BD31 /* JKPAppDelegate.m in Sources */,
 				568850EF19672D2E00F0BD31 /* main.m in Sources */,
 				568850F919672D2E00F0BD31 /* JKPViewController.m in Sources */,
+				5688511F19674C4E00F0BD31 /* JKPNagivationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,10 +401,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jan Ken Pon!/Jan Ken Pon!-Prefix.pch";
 				INFOPLIST_FILE = "Jan Ken Pon!/Jan Ken Pon!-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -390,10 +417,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jan Ken Pon!/Jan Ken Pon!-Prefix.pch";
 				INFOPLIST_FILE = "Jan Ken Pon!/Jan Ken Pon!-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

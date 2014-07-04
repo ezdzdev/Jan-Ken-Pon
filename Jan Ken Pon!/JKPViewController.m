@@ -7,6 +7,7 @@
 //
 
 #import "JKPViewController.h"
+#import "GameKitHelper.h"
 
 typedef enum {
     ROCK = 1,
@@ -20,38 +21,56 @@ typedef enum {
     LOSS = -1,
 } JKPResult;
 
-@interface JKPViewController () {
+@interface JKPViewController ()
+    <GameKitHelperDelegate> {
     int score;
 }
 @end
 
 @implementation JKPViewController
 
-- (void)viewDidLoad
-{
+- (void) viewDidLoad {
     [super viewDidLoad];
-    
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerAuthenticated)
+                                                 name:LocalPlayerIsAuthenticated object:nil];
     score = 0;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)scissorsTouched:(id)sender {
+- (void) playerAuthenticated {
+    [[GameKitHelper sharedGameKitHelper] findMatchWithViewController:self delegate:self];
+}
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
+
+
+
+
+#pragma mark - lol
+- (IBAction) scissorsTouched:(id)sender {
     self.playerChoiceLabel.text = @"Scissors!";
     [self gameVersesRandomCPU:SCISSORS];
 }
 
-- (IBAction)paperTouched:(id)sender {
+- (IBAction) paperTouched:(id)sender {
     self.playerChoiceLabel.text = @"Paper!";
     [self gameVersesRandomCPU:PAPER];
 }
 
-- (IBAction)rockTouched:(id)sender {
+- (IBAction) rockTouched:(id)sender {
     self.playerChoiceLabel.text = @"Rock!";
     [self gameVersesRandomCPU:ROCK];
 }
@@ -63,7 +82,7 @@ typedef enum {
 #pragma mark - Game Logic
 - (void) gameVersesRandomCPU:(JKPChoice)playerChoice {
     // Random CPU, choses between 1-3 using rand()
-    JKPChoice randomChoice = (int)rand()%3 + 1;
+    JKPChoice randomChoice = (int)rand() % 3 + 1;
 
     if ( randomChoice == ROCK )
         self.computerChoiceLabel.text = @"Rock!";
@@ -107,5 +126,23 @@ typedef enum {
 
 - (void) updateScore {
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", score];
+}
+
+
+
+
+
+
+#pragma mark GameKitHelperDelegate
+- (void) matchStarted {
+    NSLog(@"Match started");
+}
+
+- (void) matchEnded {
+    NSLog(@"Match ended");
+}
+
+- (void) match:(GKMatch *)match didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID {
+    NSLog(@"Received data");
 }
 @end
