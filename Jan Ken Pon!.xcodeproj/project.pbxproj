@@ -24,6 +24,9 @@
 		5688511819673C8100F0BD31 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5688511719673C8100F0BD31 /* GameKit.framework */; };
 		5688511C1967424F00F0BD31 /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5688511B1967424F00F0BD31 /* GameKitHelper.m */; };
 		5688511F19674C4E00F0BD31 /* JKPNagivationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5688511E19674C4E00F0BD31 /* JKPNagivationController.m */; };
+		5688512F19675AA400F0BD31 /* paper-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5688512C19675AA400F0BD31 /* paper-small.png */; };
+		5688513019675AA400F0BD31 /* scissors-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5688512D19675AA400F0BD31 /* scissors-small.png */; };
+		5688513119675AA400F0BD31 /* rock-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5688512E19675AA400F0BD31 /* rock-small.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		5688511B1967424F00F0BD31 /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
 		5688511D19674C4E00F0BD31 /* JKPNagivationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPNagivationController.h; sourceTree = "<group>"; };
 		5688511E19674C4E00F0BD31 /* JKPNagivationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPNagivationController.m; sourceTree = "<group>"; };
+		5688512C19675AA400F0BD31 /* paper-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper-small.png"; sourceTree = "<group>"; };
+		5688512D19675AA400F0BD31 /* scissors-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scissors-small.png"; sourceTree = "<group>"; };
+		5688512E19675AA400F0BD31 /* rock-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rock-small.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +136,9 @@
 				568850F719672D2E00F0BD31 /* JKPViewController.h */,
 				568850F819672D2E00F0BD31 /* JKPViewController.m */,
 				568850FA19672D2E00F0BD31 /* Images.xcassets */,
-				568850E919672D2E00F0BD31 /* Supporting Files */,
 				5688511A1967424F00F0BD31 /* GameKitHelper.h */,
 				5688511B1967424F00F0BD31 /* GameKitHelper.m */,
+				568850E919672D2E00F0BD31 /* Supporting Files */,
 			);
 			path = "Jan Ken Pon!";
 			sourceTree = "<group>";
@@ -144,6 +150,9 @@
 				568850EB19672D2E00F0BD31 /* InfoPlist.strings */,
 				568850EE19672D2E00F0BD31 /* main.m */,
 				568850F019672D2E00F0BD31 /* Jan Ken Pon!-Prefix.pch */,
+				5688512C19675AA400F0BD31 /* paper-small.png */,
+				5688512D19675AA400F0BD31 /* scissors-small.png */,
+				5688512E19675AA400F0BD31 /* rock-small.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -251,6 +260,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5688513119675AA400F0BD31 /* rock-small.png in Resources */,
+				5688513019675AA400F0BD31 /* scissors-small.png in Resources */,
+				5688512F19675AA400F0BD31 /* paper-small.png in Resources */,
 				568850FB19672D2E00F0BD31 /* Images.xcassets in Resources */,
 				568850ED19672D2E00F0BD31 /* InfoPlist.strings in Resources */,
 				568850F619672D2E00F0BD31 /* Main.storyboard in Resources */,
