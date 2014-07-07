@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		563775441968C55B00AC87DE /* MultiplayerNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 563775431968C55B00AC87DE /* MultiplayerNetworking.m */; };
 		568850E319672D2E00F0BD31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568850E219672D2E00F0BD31 /* Foundation.framework */; };
 		568850E519672D2E00F0BD31 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568850E419672D2E00F0BD31 /* CoreGraphics.framework */; };
 		568850E719672D2E00F0BD31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568850E619672D2E00F0BD31 /* UIKit.framework */; };
@@ -27,6 +28,7 @@
 		5688512F19675AA400F0BD31 /* paper-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5688512C19675AA400F0BD31 /* paper-small.png */; };
 		5688513019675AA400F0BD31 /* scissors-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5688512D19675AA400F0BD31 /* scissors-small.png */; };
 		5688513119675AA400F0BD31 /* rock-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5688512E19675AA400F0BD31 /* rock-small.png */; };
+		56F8D409196A3A3F00C39A2D /* SelectionQueueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F8D408196A3A3F00C39A2D /* SelectionQueueView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		563775421968C55B00AC87DE /* MultiplayerNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiplayerNetworking.h; sourceTree = "<group>"; };
+		563775431968C55B00AC87DE /* MultiplayerNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplayerNetworking.m; sourceTree = "<group>"; };
 		568850DF19672D2E00F0BD31 /* Jan Ken Pon!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jan Ken Pon!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		568850E219672D2E00F0BD31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		568850E419672D2E00F0BD31 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,6 +71,8 @@
 		5688512C19675AA400F0BD31 /* paper-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper-small.png"; sourceTree = "<group>"; };
 		5688512D19675AA400F0BD31 /* scissors-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scissors-small.png"; sourceTree = "<group>"; };
 		5688512E19675AA400F0BD31 /* rock-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rock-small.png"; sourceTree = "<group>"; };
+		56F8D407196A3A3F00C39A2D /* SelectionQueueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionQueueView.h; sourceTree = "<group>"; };
+		56F8D408196A3A3F00C39A2D /* SelectionQueueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionQueueView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,8 +142,12 @@
 				568850F719672D2E00F0BD31 /* JKPViewController.h */,
 				568850F819672D2E00F0BD31 /* JKPViewController.m */,
 				568850FA19672D2E00F0BD31 /* Images.xcassets */,
+				56F8D407196A3A3F00C39A2D /* SelectionQueueView.h */,
+				56F8D408196A3A3F00C39A2D /* SelectionQueueView.m */,
 				5688511A1967424F00F0BD31 /* GameKitHelper.h */,
 				5688511B1967424F00F0BD31 /* GameKitHelper.m */,
+				563775421968C55B00AC87DE /* MultiplayerNetworking.h */,
+				563775431968C55B00AC87DE /* MultiplayerNetworking.m */,
 				568850E919672D2E00F0BD31 /* Supporting Files */,
 			);
 			path = "Jan Ken Pon!";
@@ -288,6 +298,8 @@
 				568850F319672D2E00F0BD31 /* JKPAppDelegate.m in Sources */,
 				568850EF19672D2E00F0BD31 /* main.m in Sources */,
 				568850F919672D2E00F0BD31 /* JKPViewController.m in Sources */,
+				56F8D409196A3A3F00C39A2D /* SelectionQueueView.m in Sources */,
+				563775441968C55B00AC87DE /* MultiplayerNetworking.m in Sources */,
 				5688511F19674C4E00F0BD31 /* JKPNagivationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +511,7 @@
 				5688511319672D2E00F0BD31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5688511419672D2E00F0BD31 /* Build configuration list for PBXNativeTarget "Jan Ken Pon!Tests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +520,7 @@
 				5688511619672D2E00F0BD31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

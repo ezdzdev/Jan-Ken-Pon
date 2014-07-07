@@ -9,6 +9,7 @@
 #import "JKPViewController.h"
 #import "GameKitHelper.h"
 
+
 typedef enum {
     ROCK = 1,
     PAPER = 2,
@@ -21,10 +22,16 @@ typedef enum {
     LOSS = -1,
 } JKPResult;
 
-@interface JKPViewController ()
-    <GameKitHelperDelegate> {
-    int score;
+typedef enum {
+    RANDOM = 1,
+} JKPAI;
+
+@interface JKPViewController () {
+    int _score;
+    BOOL _isAttacker;
+    MultiplayerNetworking *_networkingEngine;
 }
+@property (nonatomic, strong) NSMutableArray *attackingArray;
 @end
 
 @implementation JKPViewController
@@ -38,7 +45,9 @@ typedef enum {
     [super viewDidAppear:animated];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerAuthenticated)
                                                  name:LocalPlayerIsAuthenticated object:nil];
-    score = 0;
+    _score = 0;
+    _isAttacker = NO;
+    self.attackingArray = [NSMutableArray arrayWithCapacity:5];
 }
 
 - (void) didReceiveMemoryWarning {
@@ -47,7 +56,7 @@ typedef enum {
 }
 
 - (void) playerAuthenticated {
-    [[GameKitHelper sharedGameKitHelper] findMatchWithViewController:self delegate:self];
+    self.findMatchButton.hidden = NO;
 }
 
 - (void) dealloc {
@@ -62,17 +71,24 @@ typedef enum {
 #pragma mark - lol
 - (IBAction) scissorsTouched:(id)sender {
     self.playerChoiceLabel.text = @"Scissors!";
-    [self gameVersesRandomCPU:SCISSORS];
+    [self game:SCISSORS];
 }
 
 - (IBAction) paperTouched:(id)sender {
     self.playerChoiceLabel.text = @"Paper!";
-    [self gameVersesRandomCPU:PAPER];
+    [self game:PAPER];
 }
 
 - (IBAction) rockTouched:(id)sender {
     self.playerChoiceLabel.text = @"Rock!";
-    [self gameVersesRandomCPU:ROCK];
+    [self game:ROCK];
+}
+
+- (IBAction)findMatch:(id)sender {
+    _networkingEngine = [[MultiplayerNetworking alloc] init];
+    _networkingEngine.delegate = self;
+    
+    [[GameKitHelper sharedGameKitHelper] findMatchWithViewController:self delegate:_networkingEngine];
 }
 
 
@@ -80,19 +96,51 @@ typedef enum {
 
 
 #pragma mark - Game Logic
+// TODO: Separate opponent AI with ours
+// TODO: Then we can implement an overarching function for turn logic
+- (void) gameAttackMode:(JKPChoice)playerChoice {
+    // Create attacking array
+    [self.attackingArray addObject:[NSNumber numberWithInt:playerChoice]];
+    
+    // Opponent turn
+    if ( self.attackingArray.count == 5 ) {
+        // let AI defend
+        for ( int i = 0; i < 5; i++ )
+            [self.attackingArray addObject:[NSNumber numberWithInt:[self getChoice:RANDOM]]];
+    }
+}
+
+- (void) gameDefendMode:(JKPChoice)playerChoice {
+    // Let AI create attacking array
+    // Opponent turn
+    if ( self.attackingArray.count == 0 ) {
+        for ( int i = 0; i < 5; i++ ) {
+            [self.attackingArray addObject:[NSNumber numberWithInt:[self getChoice:RANDOM]]];
+        }
+    }
+    
+    // Let player defend
+    _score += [self A:playerChoice verseB:(JKPChoice)[self.attackingArray lastObject]];
+    [self.attackingArray removeLastObject];
+}
+
+- (void) game:(JKPChoice)playerChoice {
+    [self.selectionQueueView enqueueSelection:playerChoice];
+}
+
 - (void) gameVersesRandomCPU:(JKPChoice)playerChoice {
     // Random CPU, choses between 1-3 using rand()
-    JKPChoice randomChoice = (int)rand() % 3 + 1;
+    JKPChoice choice = [self getChoice:RANDOM];
 
-    if ( randomChoice == ROCK )
+    if ( choice == ROCK )
         self.computerChoiceLabel.text = @"Rock!";
-    else if ( randomChoice == PAPER )
+    else if ( choice == PAPER )
         self.computerChoiceLabel.text = @"Paper!";
-    else if ( randomChoice == SCISSORS )
+    else if ( choice == SCISSORS )
         self.computerChoiceLabel.text = @"Scissors!";
     
     // Find results
-    JKPResult result = [self A:playerChoice verseB:randomChoice];
+    JKPResult result = [self A:playerChoice verseB:choice];
     
     if ( result == WIN )
         self.view.backgroundColor = [UIColor greenColor];
@@ -101,8 +149,17 @@ typedef enum {
     else
         self.view.backgroundColor = [UIColor yellowColor];
     
-    score += result;
+    _score += result;
     [self updateScore];
+}
+
+- (JKPChoice) getChoice:(JKPAI)ai {
+    JKPChoice choice;
+    if (ai == RANDOM) {
+        choice = rand() % 3 + 1;
+    }
+    NSAssert(!(choice < 1 || choice > 3), @"CHOICE OUT OF BOUNDS [%d]", choice);
+    return choice;
 }
 
 - (JKPResult) A:(JKPChoice)a verseB:(JKPChoice)b {
@@ -125,7 +182,7 @@ typedef enum {
 }
 
 - (void) updateScore {
-    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", score];
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", _score];
 }
 
 
@@ -133,16 +190,8 @@ typedef enum {
 
 
 
-#pragma mark GameKitHelperDelegate
-- (void) matchStarted {
-    NSLog(@"Match started");
-}
-
+#pragma mark - MultiplayerNetworkingDelegate
 - (void) matchEnded {
     NSLog(@"Match ended");
-}
-
-- (void) match:(GKMatch *)match didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID {
-    NSLog(@"Received data");
 }
 @end
